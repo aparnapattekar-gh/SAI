@@ -495,16 +495,16 @@ typedef enum _sai_port_dual_media_t
 typedef enum _sai_port_pt_timestamp_template_type
 {
     /** Timestamp nanosecond bits [8:15] */
-    SAI_PORT_PT_TIMESTAMP_TEMPLATE0,
+    SAI_PORT_PATH_TRACING_TIMESTAMP_TEMPLATE_8_15,
 
     /** Timestamp nanosecond bits [12:19] */
-    SAI_PORT_PT_TIMESTAMP_TEMPLATE1,
+    SAI_PORT_PATH_TRACING_TIMESTAMP_TEMPLATE_12_19,
 
     /** Timestamp nanosecond bits [16:23] */
-    SAI_PORT_PT_TEMPLATE_TIMESTAMP2,
+    SAI_PORT_PATH_TRACING_TIMESTAMP_TEMPLATE_16_23,
 
     /** Timestamp nanosecond bits [20:27] */
-    SAI_PORT_PT_TEMPLATE_TIMESTAMP3,
+    SAI_PORT_PATH_TRACING_TIMESTAMP_TEMPLATE_20_27,
 
 } sai_port_pt_timestamp_template_type;
 
@@ -2306,7 +2306,8 @@ typedef enum _sai_port_attr_t
     /**
      * @brief Configure 12b path tracing interface id
      *
-     * Set interface id = #SAI_NULL_OBJECT_ID to disable path tracing on port.
+     * Set interface id = 0 to disable path tracing on port.
+     * Valid values for interface id are 0 - 4095.
      *
      * @type sai_uint16_t
      * @flags CREATE_AND_SET
