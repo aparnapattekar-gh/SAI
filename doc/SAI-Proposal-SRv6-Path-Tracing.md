@@ -1,7 +1,7 @@
 Overview
 Path tracing provides a record of the packet path as a sequence of interface ids. In addition, it provides a record of end-to-end delay, per-hop delay, and load on each egress interface along the packet delivery path.
 
-This document covers path tracing for midpoint node as per IETF Draft
+This document covers SAI attributes to configure path tracing for midpoint node as per IETF Draft
 https://datatracker.ietf.org/doc/draft-filsfils-spring-path-tracing/
 
 When midpoint node that is path tracing enabled receives an IPv6 packet that contains an IPv6 HbH-PT option, records it's path tracing information into the HbH-PT header. This information is known as Midpoint Compressed Data (MCD).
